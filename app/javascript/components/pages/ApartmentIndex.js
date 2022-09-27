@@ -6,7 +6,7 @@ const ApartmentIndex = ({mockApartments}) => {
     <div>
     {mockApartments.map((mockApartment)=> {
       return ( 
-        <>
+        
         <Card style={{width: '18rem'}}>
           <img alt="Card" src={mockApartment.image}/>
           <CardBody>
@@ -38,7 +38,7 @@ const ApartmentIndex = ({mockApartments}) => {
                 </CardLink>
             </CardBody>
          </Card>
-     </>
+     
       )
     })
   }
