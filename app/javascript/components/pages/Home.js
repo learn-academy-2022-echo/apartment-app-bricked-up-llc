@@ -3,7 +3,7 @@ import { Button, NavLink, NavItem} from "reactstrap"
 const Home = (props) => {
   return (
     <>
-      <h1>Home</h1>
+      <h1>Welcome to Bricked Up!</h1>
       <h3>Description of app</h3>
       {props.logged_in && (
         <>
@@ -30,14 +30,14 @@ const Home = (props) => {
             <NavItem>
               <Button>
                 <a href={props.new_user_route} className="nav-link">
-                  Please Sign in
+                  Please Sign up
                 </a>
               </Button>
             </NavItem>
             <NavItem>
               <Button>
                 <a href={props.sign_in_route} className="nav-link">
-                  Sign Up
+                  Sign In
                 </a>
               </Button>
             </NavItem>
