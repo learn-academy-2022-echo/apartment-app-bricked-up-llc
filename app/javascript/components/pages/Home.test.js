@@ -1,10 +1,11 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { screen, render } from "@testing-library/react"
 import Home from "./Home"
 
 describe("<Home />", () => {
   it("renders without crashing", () => {
-    const div = document.createElement("div")
-    render(<Home />, div)
+    render(<Home />)
+    const element = screen.getByText(/Home/i)
+    expect(element).toBeInTheDocument()
   })
 })
