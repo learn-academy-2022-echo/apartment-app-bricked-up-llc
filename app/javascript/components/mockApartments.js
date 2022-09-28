@@ -2,7 +2,7 @@
 
 const mockApartments = [
   {
-    user_id: current_user,
+    
     street: "4 Privet Drive",
     city: "Little Whinging",
     state: "Surrey",
