@@ -8,7 +8,7 @@ const ApartmentIndex = ({apartments}) => {
     <div>
     {apartments.map((apartment)=> {
       return ( 
-        
+        <>
         <Card style={{width: '18rem'}}>
           <img alt="Card" src={apartment.image}/>
           <CardBody>
@@ -44,7 +44,7 @@ const ApartmentIndex = ({apartments}) => {
                 </CardLink>
             </CardBody>
          </Card>
-     
+         </>
       )
     })
   }

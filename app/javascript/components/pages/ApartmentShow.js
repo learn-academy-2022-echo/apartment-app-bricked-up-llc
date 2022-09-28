@@ -8,6 +8,7 @@ const ApartmentShow = ({apartments}) => {
   let currentApartment = apartments.find((apartment) => apartment.id === +id)
   return (
     <>
+    <h1>View Your Apartment</h1>
       <Card
   style={{
     width: '18rem'
