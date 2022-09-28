@@ -1,37 +1,43 @@
 import React from "react"
-import {Card, CardBody,CardText, CardTitle, ListGroup, ListGroupItem, CardLink} from "reactstrap"
-const ApartmentIndex = ({mockApartments}) => {
-  
+import {Card, Button, CardBody,CardText, CardTitle, ListGroup, ListGroupItem, CardLink} from "reactstrap"
+import {NavLink} from 'react-router-dom'
+
+const ApartmentIndex = ({apartments}) => {
+  console.log(apartments)
   return (
     <div>
-    {mockApartments.map((mockApartment)=> {
+    {apartments.map((apartment)=> {
       return ( 
         
         <Card style={{width: '18rem'}}>
-          <img alt="Card" src={mockApartment.image}/>
+          <img alt="Card" src={apartment.image}/>
           <CardBody>
             <CardTitle tag="h5">
-              {mockApartment.street}
+              {apartment.street}
             </CardTitle>
             <CardText>
-              {mockApartment.city}
+              {apartment.city}
             </CardText>
             </CardBody>
           <ListGroup flush>
           <ListGroupItem>
-                  {mockApartment.state}
+                  {apartment.state}
           </ListGroupItem>
           <ListGroupItem>
-                  {mockApartment.price}
+                  {apartment.price}
           </ListGroupItem>
           <ListGroupItem>
-                  {mockApartment.bedrooms}
-                  {mockApartment.bathrooms}
+                  {apartment.bedrooms}
+                  {apartment.bathrooms}
           </ListGroupItem>
           </ListGroup>
             <CardBody>
-                <CardLink href="#">
-                  Card Link
+                <CardLink >
+                <NavLink to={`/apartmentshow/${apartment.id}`} className="nav-link">
+                    <Button>
+                    Find Out More
+                    </Button>
+                </NavLink>
                 </CardLink>
                 <CardLink href="#">
                   Another Card Link
