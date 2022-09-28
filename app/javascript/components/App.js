@@ -11,6 +11,8 @@ import ApartmentShow from "./pages/ApartmentShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import mockApartments from "./mockApartments"
+import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex"
+import Navigation from "./components/Navigation"
 const App = (props) => {
   const [apartments, setApartments] = useState([])
 
@@ -32,7 +34,8 @@ const App = (props) => {
       <Header {...props} />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/apartmentindex"  element={<ApartmentIndex mockApartments={mockApartments}/>} />
+        <Route path="/apartmentindex/:id"  element={<ApartmentIndex mockApartments={mockApartments}/>} />
+        <Route path="/protectedapartmentindex"  element={<ProtectedApartmentIndex {...props} mockApartments={mockApartments}/>} />
         <Route path="/apartmentshow" element={<ApartmentShow />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
