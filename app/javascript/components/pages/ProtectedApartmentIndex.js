@@ -1,7 +1,7 @@
 import React from "react"
 import {Card, CardBody,CardText, CardTitle, ListGroup, ListGroupItem, CardLink} from "reactstrap"
 import mockApartments from "../mockApartments"
-const ProtectedApartmentIndex = ({props, mockApartments}) => {
+const ProtectedApartmentIndex = ({mockApartments}) => {
   
   return (
     <div>

@@ -22,7 +22,7 @@ const Navigation = ({
               See All Properties
               </NavLink>
           </NavItem>
-        {logged_in && user_id === current_user && (
+        {logged_in && current_user && (
           <NavItem>
             <NavLink to="/protectedapartmentindex" className="nav-link">
               My properties
