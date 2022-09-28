@@ -22,5 +22,7 @@ describe("<Navigation />", () => {
     )
     userEvent.click(screen.getByText("Home"))
     expect(screen.getByText("Home")).toBeInTheDocument()
+    userEvent.click(screen.getByText("See All Properties"))
+    expect(screen.getByText("See All Properties")).toBeInTheDocument()
   })
 })
