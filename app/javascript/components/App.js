@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound"
 import mockApartments from "./mockApartments"
 import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex"
 import Navigation from "./components/Navigation"
+
 const App = (props) => {
   const [apartments, setApartments] = useState([])
 
