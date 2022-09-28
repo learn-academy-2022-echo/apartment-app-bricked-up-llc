@@ -1,15 +1,17 @@
 import React from "react"
 import {Card, CardBody,CardText, CardTitle, ListGroup, ListGroupItem, CardLink} from "reactstrap"
 import mockApartments from "../mockApartments"
-const ProtectedApartmentIndex = ({mockApartments}) => {
+const ProtectedApartmentIndex = (apartments) => {
   
   return (
     <div>
-    {mockApartments.map((mockApartment)=> {
+    {apartments.map((mockApartment)=> {
+      if (apartments.user_id === current_user)
+        
       return ( 
         <>
         <h1>Protected Apartment Index</h1>
-        <Card style={{width: '18rem'}}>
+        {/* <Card style={{width: '18rem'}}>
           <img alt="Card" src={mockApartment.image}/>
           <CardBody>
             <CardTitle tag="h5">
@@ -39,7 +41,7 @@ const ProtectedApartmentIndex = ({mockApartments}) => {
                   Another Card Link
                 </CardLink>
             </CardBody>
-         </Card>
+         </Card> */}
         </>
       )
     })
