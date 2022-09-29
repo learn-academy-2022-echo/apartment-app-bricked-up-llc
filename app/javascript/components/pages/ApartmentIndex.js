@@ -42,7 +42,6 @@ const ApartmentIndex = ({ apartments }) => {
                     <Button>Find Out More</Button>
                   </NavLink>
                 </CardLink>
-                <CardLink href="#">Another Card Link</CardLink>
               </CardBody>
             </Card>
           </>

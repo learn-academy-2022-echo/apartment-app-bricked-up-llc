@@ -78,7 +78,7 @@ const ApartmentNew = ({ createApartment }) => {
         <Row>
           <Col md={6}>
             <FormGroup>
-              <Label for="email">Manager</Label>
+              <Label for="email">Email</Label>
               <Input
                 name="email"
                 placeholder="Enter an Email"
@@ -94,7 +94,7 @@ const ApartmentNew = ({ createApartment }) => {
               <Input
                 name="price"
                 placeholder="Enter The Price"
-                type="text"
+                type="number"
                 onChange={handleApartments}
                 value={newApartment.price}
               />
@@ -106,7 +106,7 @@ const ApartmentNew = ({ createApartment }) => {
               <Input
                 name="bedrooms"
                 placeholder="Number of Bedrooms"
-                type="text"
+                type="number"
                 onChange={handleApartments}
                 value={newApartment.bedrooms}
               />
@@ -118,7 +118,7 @@ const ApartmentNew = ({ createApartment }) => {
           <Input
             name="bathrooms"
             placeholder="Number of Bathrooms"
-            type="text"
+            type="number"
             onChange={handleApartments}
             value={newApartment.bathrooms}
           />
