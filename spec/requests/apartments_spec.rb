@@ -35,4 +35,31 @@ RSpec.describe "Apartments", type: :request do
       expect(apartment['email']).to eq 'hudson@example.com'
     end
   end
+
+  describe "POST /create" do
+    it 'creates an apartment for a user' do
+
+      apartment_params = {
+        apartment: {
+          street: '221c Baker Street', 
+          city: 'London', 
+          state: 'England', 
+          manager: 'Ms. Hudson', 
+          email: 'hudson@example.com', 
+          price: '1000', 
+          bedrooms: 2, 
+          bathrooms: 2, 
+          pets: 'yes',
+          image: 'aksflsakdjflkasjdlfkj.com',
+          user_id: user.id
+        }
+      }
+      post '/apartments', params: apartment_params
+
+      apartment = Apartment.first
+      p apartment
+
+      expect(response).to have_http_status(200)
+    end
+  end
 end
