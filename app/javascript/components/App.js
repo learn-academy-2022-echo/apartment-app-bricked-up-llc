@@ -42,6 +42,9 @@ const App = (props) => {
           path="/apartmentindex"
           element={<ApartmentIndex apartments={apartments} />}
         />
+        <Route path="/protectedapartmentindex" 
+        element={<ApartmentIndex apartments={apartments} {...props}/>}
+        />
         <Route
           path="/apartmentshow/:id"
           element={<ApartmentShow apartments={apartments} />}
@@ -52,6 +55,7 @@ const App = (props) => {
         />
         <Route path="/apartmentedit" element={<ApartmentEdit />} />
         <Route element={<NotFound />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
