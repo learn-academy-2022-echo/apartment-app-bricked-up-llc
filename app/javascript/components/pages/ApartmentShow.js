@@ -25,14 +25,11 @@ const ApartmentShow = ({ apartments }) => {
       >
         <img alt="Card" src={currentApartment.image} />
         <CardBody>
-          <CardTitle tag="h5">
-            {currentApartment.street},{currentApartment.city},
-            {currentApartment.state}
-          </CardTitle>
-          <CardText>
-            Manager: {currentApartment.manager}
-            Manager Email: {currentApartment.email}
-          </CardText>
+          <CardTitle>{currentApartment.street},</CardTitle>
+          <CardTitle>{currentApartment.city},</CardTitle>
+          <CardTitle>{currentApartment.state}.</CardTitle>
+          <CardText>Manager: {currentApartment.manager}</CardText>
+          <CardText>Manager Email: {currentApartment.email}</CardText>
         </CardBody>
         <ListGroup flush>
           <ListGroupItem>Price: {currentApartment.price}</ListGroupItem>

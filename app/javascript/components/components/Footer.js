@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
   return (
     <>
-      <h3>Footer</h3>
+      <p> &copy; Apartment App by Sam Scott, Holden Prine, Luis Laurel, and Hieu Le</p>
     </>
   )
 }

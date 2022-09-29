@@ -14,14 +14,23 @@ import mockApartments from "./mockApartments";
 import Navigation from "./components/Navigation";
 
 const App = (props) => {
-  const [apartments, setApartments] = useState(mockApartments);
+  const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
     readApartments();
   }, []);
 
   const createApartment = (apartment) => {
-    console.log(apartment);
+    fetch("http://localhost:3000/apartments", {
+      body: JSON.stringify(apartment),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((response) => response.json())
+      .then((payload) => readApartments(payload))
+      .catch((errors) => console.log("Apartment create errors:", errors));
   };
 
   const readApartments = () => {
