@@ -17,7 +17,8 @@ RSpec.describe "Apartments", type: :request do
         price: '1000', 
         bedrooms: 2, 
         bathrooms: 2, 
-        pets: 'yes'
+        pets: 'yes',
+        image: 'aksflsakdjflkasjdlfkj.com'
       )
 
       get '/apartments'

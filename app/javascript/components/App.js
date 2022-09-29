@@ -11,6 +11,8 @@ import ApartmentShow from "./pages/ApartmentShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import mockApartments from "./mockApartments"
+import Navigation from "./components/Navigation"
+
 const App = (props) => {
   const [apartments, setApartments] = useState(mockApartments)
 

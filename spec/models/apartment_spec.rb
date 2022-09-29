@@ -162,23 +162,4 @@ RSpec.describe Apartment, type: :model do
     )
     expect(apartment.errors[:image]).to_not be_empty 
   end
-
-  # SPACE TO POTENTIALLY VALIDATE FORIEGN KEY
-
-  # it 'should have a valid user_id' do
-  #   apartment = user.apartments.create(
-  #     street: '3b Baker St',
-  #     city: 'London', 
-  #     state: 'England', 
-  #     manager: 'Ms. Hudson', 
-  #     email: 'mzhud@email.com', 
-  #     price: '1000', 
-  #     bedrooms: 2, 
-  #     bathrooms: 2, 
-  #     pets: 'no',
-  #     image: 'https://c8.alamy.com/comp/B0RJGE/small-bungalow-home-with-pathway-in-addlestone-surrey-uk-B0RJGE.jpg'
-  #   )
-  #   expect(apartment.errors[:user_id]).to_not be_empty 
-  # end
-
 end
