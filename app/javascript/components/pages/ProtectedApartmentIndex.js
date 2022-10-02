@@ -2,16 +2,17 @@ import React from "react"
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
 import { NavLink, useParams } from 'react-router-dom'
 
-const ProtectedApartmentIndex = ({apartments, current_user}) => {
+const ProtectedApartmentIndex = ({apartments, current_user, logged_in}) => {
 
 const { id } = useParams()
 const filteredApartments = apartments?.filter(apartment => apartment.user_id === current_user.id)
 console.log(apartments);
+// console.log(curret_user.id)
 //  console.log(apartment.user_id)
 return (
     <>
     <h1>My Apartments</h1>
-      {filteredApartments?.map((apartment, index) => {
+      {logged_in && (filteredApartments?.map((apartment, index) => {
       return (
       <Card style={{width: '18rem'}} key={index}>
       <img alt="Unit Image" src={apartment.image}/>
@@ -31,7 +32,7 @@ return (
       </Card>
       )
       })
-    }
+    )}
     </>
     )
 }

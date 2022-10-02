@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
+import ProtectedApartmentIndex from "./pages/ProtectedApartmentIndex";
 import ApartmentEdit from "./pages/ApartmentEdit";
 import ApartmentIndex from "./pages/ApartmentIndex";
 import ApartmentNew from "./pages/ApartmentNew";
@@ -15,6 +15,12 @@ import Navigation from "./components/Navigation";
 
 const App = (props) => {
   const [apartments, setApartments] = useState(mockApartments);
+console.log(props)
+if (props.logged_in){
+  console.log(props.current_user.id)
+}
+
+
 
   useEffect(() => {
     readApartments();
@@ -43,7 +49,7 @@ const App = (props) => {
           element={<ApartmentIndex apartments={apartments} />}
         />
         <Route path="/protectedapartmentindex" 
-        element={<ApartmentIndex apartments={apartments} {...props}/>}
+        element={<ProtectedApartmentIndex apartments={apartments} {...props}/>}
         />
         <Route
           path="/apartmentshow/:id"
